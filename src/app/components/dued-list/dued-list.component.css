@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #e0f5f8;
+}
+.container-fluid{
+    background-color: #970095;
+    color: white;
+}
+.navbar-header{
+    padding-top: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.btn{
+    background-color:   #970095;
+    border: 1px solid #970095;
+    width: 35px;
+    border-radius: 50px;
+    color: white;
+    
+}

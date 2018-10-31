@@ -1,0 +1,20 @@
+output{
+    border: 2px solid #007ba1;
+    border-radius: 5px;
+    background-color: #fff7d7;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    color: #970095;
+}
+.container-fluid{
+    background-color: #970095;
+    color: white;
+}
+.content{
+    background-color: #00b1c6;
+}
+.col-sm-5, .col-sm-7{
+    padding: 10px;
+}

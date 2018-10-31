@@ -1,0 +1,63 @@
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>DueD
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <app-dued-summary *ngFor="let dued of dueds" [dued]="dued"></app-dued-summary>
+  <!-- div class="text-right">
+    <button type="button" class="btn btn-default text-center" data-toggle="modal" data-target="#myModal">+</button>
+  </div -->
+  <br><br><br>
+  <div class="newDueD panel panel-default" style="max-width: 100%">
+    <div class="panel-heading">
+      <h4>Add New Due Date Item</h4>
+    </div>
+    <div class="panel-body">
+      <div class="input-group">
+        <input type="text" style="width: 800px" [(ngModel)]="dued_inprogress.name" class="form-control" placeholder="Enter Name" required>
+      </div>
+      <div class="input-group" style="width: 800px">
+        <!-- input type="text" [(ngModel)]="dued_inprogress.cat" placeholder="Category" --><br>
+          <select name="Category" id="category" class="form-control"  [(ngModel)]="dued_inprogress.cat" required>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Cell phone">Cell Phone</option>
+            <option value="Electricity">Electricity</option>
+            <option value="Home Phone">Home Phone</option>
+            <option value="Home Rent">Home Rent</option>
+            <option value="Insurance">Insurance</option>
+            <option value="Internet">Internet</option>
+            <option value="Others">Others</option>
+          </select>
+      </div> 
+      <div class="input-group" style="width: 800px">
+          <!-- input type="text" [(ngModel)]="dued_inprogress.freq" placeholder="Frequency" --><br>
+        <select name="Frequency" id="frequency" class="form-control" [(ngModel)]="dued_inprogress.freq" required>
+          <option value="Monthly">Monthly</option>
+          <option value="Weekly">Weekly</option>
+          <option value="Yearly">Yearly</option>
+          <option value="One time">One Time</option>
+        </select>
+      </div><br>
+      <div style="width: 800px">
+          <label for="DueDate">Due On</label><br>
+          <input [(ngModel)]="dued_inprogress.due_date" type="date" data-date-format="DD" name="DueD" class="form-control" id="mydate" required/>
+      </div><br>
+      <div class="input-group">
+          <input type="button" value="Add_Dued" (click)="addDuedClicked()">
+      </div>
+    </div>
+  </div>
+</body>
